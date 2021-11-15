@@ -118,8 +118,8 @@ csharp_style_var_when_type_is_apparent                      = true : error
 csharp_style_var_elsewhere                                  = true : error
 
 # Unused value preferences
-csharp_style_unused_value_expression_statement_preference   = discard_variable : warning
-csharp_style_unused_value_assignment_preference             = discard_variable : warning
+csharp_style_unused_value_expression_statement_preference   = discard_variable : suggestion
+csharp_style_unused_value_assignment_preference             = discard_variable : suggestion
 
 # C# 7: Prefer using pattern matching over "if(x is T) { var t = (T)x; }" and "var t = x as T; if(t != null) { ... }"
 csharp_style_pattern_matching_over_is_with_cast_check       = true : warning
@@ -158,5 +158,5 @@ csharp_style_deconstructed_variable_declaration             = true : warning
 
 # Simplify new expression (IDE0090)
 csharp_style_implicit_object_creation_when_type_is_apparent = false
-csharp_style_namespace_declarations                         = file_scoped:warning
-csharp_prefer_simple_using_statement                        = false:suggestion
+csharp_style_namespace_declarations                         = file_scoped : warning
+csharp_prefer_simple_using_statement                        = false : suggestion
