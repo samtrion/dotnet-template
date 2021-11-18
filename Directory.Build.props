@@ -29,6 +29,12 @@
     <CopyrightYear>$([System.DateTime]::Now.Year)</CopyrightYear>
     <Copyright Condition="$(CopyrightYear) > $(CopyrightYearStart)">Copyright @ $(Authors) $(CopyrightYearStart) - $(CopyrightYear)</Copyright>
     <Copyright Condition="$(CopyrightYear) == $(CopyrightYearStart)">Copyright @ $(Authors) $(CopyrightYearStart)</Copyright>
+
+    <!--
+      Deactivates warnings for end-of-life target frameworks
+      https://andrewlock.net/fixing-build-warning-netsdk1138-when-building-end-of-life-projects-with-dotnet-5/
+      -->
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>    
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
